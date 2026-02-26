@@ -82,10 +82,37 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right: Form */}
+          {/* Right: Calendly + Form */}
           <div className="bg-white rounded-2xl p-8 shadow-2xl">
+
+            {/* Calendly CTA */}
+            <div className="mb-6">
+              <h3 className="text-xl font-bold mb-1" style={{ color: "#0F1B4C" }}>Ready to talk?</h3>
+              <p className="text-sm mb-4" style={{ color: "#64748B" }}>Book a free 30-minute discovery call directly on my calendar.</p>
+              <a
+                href="https://calendly.com/apexcompensation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl text-white font-semibold text-sm transition-all hover:scale-[1.02] active:scale-95"
+                style={{ background: "linear-gradient(135deg, #FF6B6B 0%, #D946EF 100%)" }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+                  <path d="M3 9h18M8 2v4M16 2v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>
+                Book a discovery call
+              </a>
+            </div>
+
+            {/* Divider */}
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex-1 h-px" style={{ background: "#E5E7EB" }} />
+              <span className="text-xs font-medium" style={{ color: "#64748B" }}>or send a message first</span>
+              <div className="flex-1 h-px" style={{ background: "#E5E7EB" }} />
+            </div>
+
             {status === "success" ? (
-              <div className="flex flex-col items-center justify-center py-12 text-center gap-4">
+              <div className="flex flex-col items-center justify-center py-8 text-center gap-4">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center"
                   style={{ background: "linear-gradient(135deg, #FF6B6B, #D946EF)" }}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -100,8 +127,8 @@ export default function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <div>
-                  <h3 className="text-xl font-bold mb-1" style={{ color: "#0F1B4C" }}>Start the conversation</h3>
-                  <p className="text-sm" style={{ color: "#64748B" }}>Takes 60 seconds. No spam, ever.</p>
+                  <h3 className="text-lg font-bold mb-1" style={{ color: "#0F1B4C" }}>Not ready to book yet?</h3>
+                  <p className="text-sm" style={{ color: "#64748B" }}>Send a note and we'll go from there.</p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
