@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
               </tr>
               <tr>
                 <td style="padding: 10px 0; color: #64748B; font-size: 13px;">Company</td>
-                <td style="padding: 10px 0; color: #0F1B4C; font-weight: 600;">${company || "—"}</td>
+                <td style="padding: 10px 0; color: #0F1B4C; font-weight: 600;">${company || "n/a"}</td>
               </tr>
               <tr>
                 <td style="padding: 10px 0; color: #64748B; font-size: 13px;">Email</td>
@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
               </tr>
               <tr>
                 <td style="padding: 10px 0; color: #64748B; font-size: 13px;">Stage</td>
-                <td style="padding: 10px 0; color: #0F1B4C; font-weight: 600;">${stage || "—"}</td>
+                <td style="padding: 10px 0; color: #0F1B4C; font-weight: 600;">${stage || "n/a"}</td>
               </tr>
             </table>
             <hr style="border: none; border-top: 1px solid #E5E7EB; margin: 20px 0;" />

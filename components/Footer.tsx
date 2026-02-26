@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
 
-          {/* Logo — full color transparent PNG on light footer background */}
+          {/* Logo - full color transparent PNG on light footer background */}
           <a href="#" className="flex items-center">
             <Image
               src="/logo-transparent.png"

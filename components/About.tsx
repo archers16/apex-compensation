@@ -65,7 +65,7 @@ export default function About() {
               </div>
             </div>
 
-            {/* Floating stat cards — desktop only */}
+            {/* Floating stat cards - desktop only */}
             <div className="hidden md:block absolute -right-6 top-12 rounded-xl px-5 py-4 bg-white shadow-xl border border-gray-100">
               <p className="text-xs mb-1" style={{ color: "#64748B" }}>Sellers covered across</p>
               <p className="text-2xl font-black" style={{ color: "#0F1B4C" }}>
@@ -146,15 +146,15 @@ export default function About() {
               className="text-4xl md:text-5xl font-black leading-tight mb-6"
               style={{ color: "#0F1B4C" }}
             >
-              I spent 9 years building comp programs at companies like Stripe, Twilio, and SOCi. Now I do it for yours.
+              I built comp programs at Stripe, Twilio, and SOCi. Now I do it for yours.
             </h2>
 
             <div className="flex flex-col gap-5 text-base leading-relaxed" style={{ color: "#64748B" }}>
               <p>
-                Before launching Apex, I spent nearly a decade inside some of the fastest-growing
+                Before launching Apex, I spent years inside some of the fastest-growing
                 B2B SaaS companies in the world. I've designed comp plans for 2,000+ sellers across
                 SMB, mid-market, enterprise, and channel teams. I've built entire comp functions from
-                scratch, stood up ICM platforms, modeled $7-8M in annual commission expense, and
+                scratch, modeled millions in annual commission expense, and
                 presented plan effectiveness to boards.
               </p>
               <p>
@@ -171,9 +171,9 @@ export default function About() {
 
             <div className="mt-8 flex flex-col gap-3">
               {[
-                "Stripe, Twilio, SOCi, Collibra, Upland — operator experience, not theory.",
+                "Stripe, Twilio, SOCi, Collibra, Upland. Operator experience, not theory.",
                 "Built from-scratch comp functions, not just plan tweaks.",
-                "CaptivateIQ and Xactly certified. ICM implementation experience.",
+                "Plans designed with your tech stack and GTM motion in mind.",
                 "Every engagement run by me directly. No juniors, no handoffs.",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">

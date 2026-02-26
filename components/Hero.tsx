@@ -23,7 +23,7 @@ export default function Hero() {
         style={{ background: "linear-gradient(135deg, #D946EF, #FF6B6B)" }}
       />
 
-      {/* Content — pb-40 pushes proof strip well above the fade zone */}
+      {/* Content - pb-40 pushes proof strip well above the fade zone */}
       <div className="relative max-w-5xl mx-auto px-6 pt-24 pb-40 w-full">
 
         {/* Eyebrow */}
@@ -73,7 +73,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Proof strip — now well above the fade */}
+        {/* Proof strip - now well above the fade */}
         <div className="border-t border-white/10 pt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { stat: "High-growth", label: "companies at an inflection point." },
@@ -98,7 +98,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom fade — pushed to very bottom so it doesn't overlap content */}
+      {/* Bottom fade - pushed to very bottom so it doesn't overlap content */}
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none" />
     </section>
   );

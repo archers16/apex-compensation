@@ -29,10 +29,10 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
 
-        {/* Logo — transparent PNG, white on dark / full color on white */}
+        {/* Logo - transparent PNG, white on dark / full color on white */}
         <a href="#" className="flex items-center">
           <div className="relative" style={{ width: 72, height: 72 }}>
-            {/* Full color version — visible on white navbar */}
+            {/* Full color version - visible on white navbar */}
             <Image
               src="/logo-transparent.png"
               alt="Apex Compensation"
@@ -43,7 +43,7 @@ export default function Navbar() {
               }`}
               priority
             />
-            {/* White version — visible over dark hero */}
+            {/* White version - visible over dark hero */}
             <Image
               src="/logo-white.png"
               alt="Apex Compensation"

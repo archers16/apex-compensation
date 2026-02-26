@@ -73,7 +73,7 @@ export default function Services() {
             Three ways to work with us.
           </h2>
           <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-            Pricing reflects the scope of your org — the number of roles, segments, and plans involved. Every engagement starts with a free 30-minute call where we figure out what actually makes sense.
+            Pricing reflects the scope of your org: the number of roles, segments, and plans involved. Every engagement starts with a free 30-minute call where we figure out what actually makes sense.
           </p>
         </div>
 
