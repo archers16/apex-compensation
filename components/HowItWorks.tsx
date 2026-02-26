@@ -10,14 +10,14 @@ const steps = [
     number: "02",
     title: "Scoping and proposal",
     description:
-      "Based on your org size, number of roles, and what needs to get done, I scope the engagement and send a clear proposal. Fixed fee or retainer, depending on the work. No surprises.",
+      "Based on your org size, number of roles, and what needs to get done, we scope the engagement and send a clear proposal. Fixed fee or retainer, depending on the work. No surprises.",
     accent: "#E855D4",
   },
   {
     number: "03",
     title: "Design and build",
     description:
-      "I work directly with you and your leadership team. Weekly check-ins, real-time collaboration, and a process built around your timeline. No junior staff, no handoffs mid-engagement.",
+      "We work directly with you and your leadership team. Weekly check-ins, real-time collaboration, and a process built around your timeline. No junior staff, no handoffs mid-engagement.",
     accent: "#D946EF",
   },
   {
