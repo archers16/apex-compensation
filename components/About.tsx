@@ -67,68 +67,46 @@ export default function About() {
 
             {/* Floating stat cards - desktop only */}
             <div className="hidden md:block absolute -right-6 top-12 rounded-xl px-5 py-4 bg-white shadow-xl border border-gray-100">
-              <p className="text-xs mb-1" style={{ color: "#64748B" }}>Sellers covered across</p>
-              <p className="text-2xl font-black" style={{ color: "#0F1B4C" }}>
-                2,000+{" "}
-                <span
-                  style={{
-                    background: "linear-gradient(135deg, #FF6B6B, #D946EF)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  plans.
-                </span>
-              </p>
-              <p className="text-xs mt-1" style={{ color: "#64748B" }}>6 B2B SaaS orgs.</p>
-            </div>
-
-            <div className="hidden md:block absolute -left-6 bottom-16 rounded-xl px-5 py-4 bg-white shadow-xl border border-gray-100">
-              <p className="text-xs mb-1" style={{ color: "#64748B" }}>Previously at</p>
-              <p className="text-sm font-bold" style={{ color: "#0F1B4C" }}>Stripe. Twilio.</p>
+              <p className="text-xs mb-1" style={{ color: "#64748B" }}>Sellers designed for</p>
+              <p className="text-2xl font-black" style={{ color: "#0F1B4C" }}>2,000+</p>
               <p
-                className="text-sm font-semibold"
+                className="text-xs mt-1 font-medium"
                 style={{
                   background: "linear-gradient(135deg, #FF6B6B, #D946EF)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                SOCi. Collibra.
+                SMB to enterprise.
               </p>
+            </div>
+
+            <div className="hidden md:block absolute -left-6 bottom-16 rounded-xl px-5 py-4 bg-white shadow-xl border border-gray-100">
+              <p className="text-xs mb-1" style={{ color: "#64748B" }}>Every engagement</p>
+              <p className="text-sm font-bold" style={{ color: "#0F1B4C" }}>Zero handoffs.</p>
+              <p className="text-sm" style={{ color: "#64748B" }}>Run by me, directly.</p>
             </div>
 
             {/* Mobile-only stat pills */}
             <div className="flex md:hidden gap-3 mt-4">
               <div className="flex-1 rounded-xl px-4 py-3 bg-gray-50 border border-gray-100">
-                <p className="text-xs mb-0.5" style={{ color: "#64748B" }}>Sellers covered</p>
-                <p className="text-base font-black" style={{ color: "#0F1B4C" }}>
-                  2,000+{" "}
-                  <span
-                    style={{
-                      background: "linear-gradient(135deg, #FF6B6B, #D946EF)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
-                  >
-                    plans
-                  </span>
-                </p>
-                <p className="text-xs" style={{ color: "#64748B" }}>6 B2B SaaS orgs.</p>
-              </div>
-              <div className="flex-1 rounded-xl px-4 py-3 bg-gray-50 border border-gray-100">
-                <p className="text-xs mb-0.5" style={{ color: "#64748B" }}>Previously at</p>
-                <p className="text-sm font-bold" style={{ color: "#0F1B4C" }}>Stripe. Twilio.</p>
+                <p className="text-xs mb-0.5" style={{ color: "#64748B" }}>Sellers designed for</p>
+                <p className="text-base font-black" style={{ color: "#0F1B4C" }}>2,000+</p>
                 <p
-                  className="text-sm font-semibold"
+                  className="text-xs font-medium"
                   style={{
                     background: "linear-gradient(135deg, #FF6B6B, #D946EF)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  SOCi. Collibra.
+                  SMB to enterprise.
                 </p>
+              </div>
+              <div className="flex-1 rounded-xl px-4 py-3 bg-gray-50 border border-gray-100">
+                <p className="text-xs mb-0.5" style={{ color: "#64748B" }}>Every engagement</p>
+                <p className="text-sm font-bold" style={{ color: "#0F1B4C" }}>Zero handoffs.</p>
+                <p className="text-xs" style={{ color: "#64748B" }}>Run by me, directly.</p>
               </div>
             </div>
           </div>
