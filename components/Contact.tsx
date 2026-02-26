@@ -17,7 +17,7 @@ export default function Contact() {
     const body = encodeURIComponent(
       `Name: ${form.name}\nCompany: ${form.company}\nEmail: ${form.email}\nStage: ${form.stage}\n\nMessage:\n${form.message}`
     );
-    window.location.href = `mailto:hello@apexcompensation.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:saxtonparcher@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -65,8 +65,8 @@ export default function Contact() {
               {[
                 {
                   label: "Email",
-                  value: "hello@apexcompensation.com",
-                  href: "mailto:hello@apexcompensation.com",
+                  value: "saxtonparcher@gmail.com",
+                  href: "mailto:saxtonparcher@gmail.com",
                 },
                 {
                   label: "Best for",
