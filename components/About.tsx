@@ -142,7 +142,7 @@ export default function About() {
               className="text-4xl md:text-5xl font-black leading-tight mb-6"
               style={{ color: "#0F1B4C" }}
             >
-              I built comp programs at Stripe, Twilio, and SOCi. Now I do it for yours.
+              I built sales compensation programs at Stripe, Twilio, and SOCi. Now I do it for yours.
             </h2>
 
             <div className="flex flex-col gap-5 text-base leading-relaxed" style={{ color: "#64748B" }}>

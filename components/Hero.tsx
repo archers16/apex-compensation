@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="flex items-center gap-3 mb-8">
           <div className="h-px w-8" style={{ background: "linear-gradient(90deg, #FF6B6B, #D946EF)" }} />
           <span className="text-white/50 text-xs font-semibold tracking-[0.22em] uppercase">
-            Premium Sales Comp Consulting
+            Sales Compensation Consulting
           </span>
         </div>
 
@@ -50,7 +50,7 @@ export default function Hero() {
 
         {/* Subhead */}
         <p className="text-xl text-white/55 font-normal leading-relaxed mb-12 max-w-2xl">
-          The question is whether that's what you actually want. Apex builds comp plans that engineer the behaviors your business needs to grow.
+          The question is whether that's what you actually want. Apex Compensation designs incentive plans and comp architecture that engineer the behaviors your business needs to grow.
         </p>
 
         {/* CTAs */}
