@@ -1,32 +1,4 @@
-const ApexMark = ({ size = 32 }: { size?: number }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 52 48"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <defs>
-      <linearGradient id="footerMarkGrad" x1="15%" y1="100%" x2="85%" y2="0%">
-        <stop offset="0%" stopColor="#FF6B6B" />
-        <stop offset="45%" stopColor="#E855D4" />
-        <stop offset="100%" stopColor="#D946EF" />
-      </linearGradient>
-      <mask id="footerMarkMask">
-        <rect width="52" height="48" fill="white" />
-        <polygon points="26,22 17,41 35,41" fill="black" />
-      </mask>
-    </defs>
-    <path
-      d="M5 45 L26 5 L47 45"
-      stroke="url(#footerMarkGrad)"
-      strokeWidth="14"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      mask="url(#footerMarkMask)"
-    />
-  </svg>
-);
+import Image from "next/image";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -36,18 +8,16 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
 
-          {/* Brand lockup */}
-          <div className="flex items-center gap-2.5">
-            <ApexMark size={32} />
-            <div className="leading-none">
-              <div className="font-black text-lg tracking-tight leading-tight" style={{ color: "#0F1B4C" }}>
-                apex
-              </div>
-              <div className="text-[9px] font-bold tracking-[0.18em] uppercase leading-tight" style={{ color: "#64748B" }}>
-                compensation
-              </div>
-            </div>
-          </div>
+          {/* Logo — full color transparent PNG on light footer background */}
+          <a href="#" className="flex items-center">
+            <Image
+              src="/logo-transparent.png"
+              alt="Apex Compensation"
+              width={80}
+              height={80}
+              className="object-contain"
+            />
+          </a>
 
           {/* Nav links */}
           <div className="flex flex-wrap gap-6 text-sm font-medium">
@@ -81,7 +51,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/saxtonarcher"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded-full flex items-center justify-center border hover:border-violet-400 transition-colors"
+              className="w-8 h-8 rounded-full flex items-center justify-center border hover:border-gray-400 transition-colors"
               style={{ borderColor: "#E5E7EB" }}
               aria-label="LinkedIn"
             >
@@ -99,13 +69,14 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Bottom bar */}
         <div
           className="mt-8 pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-2 text-xs"
           style={{ borderColor: "#E5E7EB", color: "#64748B" }}
         >
           <p>© {year} Apex Compensation. All rights reserved.</p>
           <p
-            className="font-medium italic"
+            className="font-semibold italic"
             style={{
               background: "linear-gradient(135deg, #FF6B6B, #D946EF)",
               WebkitBackgroundClip: "text",

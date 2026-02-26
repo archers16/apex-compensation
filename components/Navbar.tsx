@@ -1,42 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-
-// Accurate recreation of the Apex "A" mark:
-// - Thick rounded legs forming an A shape
-// - Coral-to-violet gradient (matching brand spec)
-// - Triangular counter punched out via SVG mask
-// - Transparent background so it works on any surface
-const ApexMark = ({ size = 36 }: { size?: number }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 52 48"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <defs>
-      <linearGradient id="navMarkGrad" x1="15%" y1="100%" x2="85%" y2="0%">
-        <stop offset="0%" stopColor="#FF6B6B" />
-        <stop offset="45%" stopColor="#E855D4" />
-        <stop offset="100%" stopColor="#D946EF" />
-      </linearGradient>
-      <mask id="navMarkMask">
-        <rect width="52" height="48" fill="white" />
-        {/* Inner counter triangle — transparent hole in the A */}
-        <polygon points="26,22 17,41 35,41" fill="black" />
-      </mask>
-    </defs>
-    {/* Two thick rounded legs: left foot → peak → right foot */}
-    <path
-      d="M5 45 L26 5 L47 45"
-      stroke="url(#navMarkGrad)"
-      strokeWidth="14"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      mask="url(#navMarkMask)"
-    />
-  </svg>
-);
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -64,38 +28,43 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo lockup */}
-        <a href="#" className="flex items-center gap-2.5 group">
-          <ApexMark size={36} />
-          <div className="leading-none">
-            <div
-              className={`font-black text-lg tracking-tight transition-colors leading-tight ${
-                scrolled ? "text-navy" : "text-white"
+
+        {/* Logo — transparent PNG, white on dark / full color on white */}
+        <a href="#" className="flex items-center">
+          <div className="relative" style={{ width: 52, height: 52 }}>
+            {/* Full color version — visible on white navbar */}
+            <Image
+              src="/logo-transparent.png"
+              alt="Apex Compensation"
+              width={52}
+              height={52}
+              className={`absolute inset-0 transition-opacity duration-300 object-contain ${
+                scrolled ? "opacity-100" : "opacity-0"
               }`}
-              style={{ fontFamily: "Inter, Arial, sans-serif" }}
-            >
-              apex
-            </div>
-            <div
-              className={`text-[9px] font-bold tracking-[0.18em] uppercase transition-colors leading-tight ${
-                scrolled ? "text-slate-500" : "text-white/60"
+              priority
+            />
+            {/* White version — visible over dark hero */}
+            <Image
+              src="/logo-white.png"
+              alt="Apex Compensation"
+              width={52}
+              height={52}
+              className={`absolute inset-0 transition-opacity duration-300 object-contain ${
+                scrolled ? "opacity-0" : "opacity-100"
               }`}
-            >
-              compensation
-            </div>
+              priority
+            />
           </div>
         </a>
 
-        {/* Desktop links */}
+        {/* Desktop nav links */}
         <div className="hidden md:flex items-center gap-8">
           {links.slice(0, 3).map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-opacity hover:opacity-60 ${
-                scrolled ? "text-navy" : "text-white/90"
-              }`}
-              style={{ color: scrolled ? "#0F1B4C" : undefined }}
+              className="text-sm font-medium transition-opacity hover:opacity-60"
+              style={{ color: scrolled ? "#0F1B4C" : "rgba(255,255,255,0.9)" }}
             >
               {link.label}
             </a>
@@ -115,9 +84,13 @@ export default function Navbar() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`block w-5 h-0.5 ${scrolled ? "bg-navy" : "bg-white"}`} style={{ background: scrolled ? "#0F1B4C" : "white" }} />
-          <span className={`block w-5 h-0.5 ${scrolled ? "bg-navy" : "bg-white"}`} style={{ background: scrolled ? "#0F1B4C" : "white" }} />
-          <span className={`block w-5 h-0.5 ${scrolled ? "bg-navy" : "bg-white"}`} style={{ background: scrolled ? "#0F1B4C" : "white" }} />
+          {[0,1,2].map(i => (
+            <span
+              key={i}
+              className="block w-5 h-0.5 transition-colors"
+              style={{ background: scrolled ? "#0F1B4C" : "white" }}
+            />
+          ))}
         </button>
       </div>
 
