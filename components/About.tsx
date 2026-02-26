@@ -163,6 +163,10 @@ export default function About() {
                 Apex exists because most companies don't have someone with this background
                 available to them full-time. Now they do, without the headcount.
               </p>
+              <p>
+                For teams navigating audit readiness, board scrutiny, or compliance requirements
+                like ASC 606 and SOX, that expertise is built into every engagement.
+              </p>
             </div>
 
             <div className="mt-8 flex flex-col gap-3">

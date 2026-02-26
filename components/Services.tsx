@@ -13,7 +13,7 @@ const services = [
       "Behavior misalignment report",
       "Prioritized recommendations",
     ],
-    ideal: "Companies who've been patching their plan and need an honest outside assessment.",
+    ideal: "Companies who've been patching their plan and need an honest outside assessment. Works for teams of 5 or 500.",
     accent: "#FF6B6B",
   },
   {
@@ -50,6 +50,7 @@ const services = [
       "SPIF strategy (when warranted)",
       "Board and leadership reporting",
       "Ongoing advisory access",
+      "Compliance-ready documentation (ASC 606, SOX)",
     ],
     ideal: "Scaling organizations building repeatable comp infrastructure ahead of the next phase of growth.",
     accent: "#E855D4",
