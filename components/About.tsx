@@ -6,12 +6,18 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
-          {/* Left: Visual */}
+          {/* Left: Photo card
+              On mobile: no overflow, no absolute-positioned cards, clean centered layout
+              On desktop: full layout with floating stat cards */}
           <div className="relative">
-            {/* Dark card */}
+
+            {/* The dark photo card — no overflow-visible on mobile */}
             <div
-              className="relative rounded-2xl overflow-visible aspect-[4/5] flex items-center justify-center"
-              style={{ background: "linear-gradient(135deg, #2D1B69 0%, #0F1B4C 100%)" }}
+              className="relative rounded-2xl flex items-center justify-center overflow-visible"
+              style={{
+                background: "linear-gradient(135deg, #2D1B69 0%, #0F1B4C 100%)",
+                aspectRatio: "4/5",
+              }}
             >
               {/* Decorative blob */}
               <div
@@ -19,9 +25,8 @@ export default function About() {
                 style={{ background: "linear-gradient(135deg, #FF6B6B, #D946EF)" }}
               />
 
-              {/* Circular photo + name */}
-              <div className="relative z-10 flex flex-col items-center gap-5">
-                {/* Gradient ring around photo */}
+              {/* Photo + name */}
+              <div className="relative z-10 flex flex-col items-center gap-5 px-4">
                 <div
                   className="rounded-full p-[3px]"
                   style={{ background: "linear-gradient(135deg, #FF6B6B, #D946EF)" }}
@@ -38,7 +43,7 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="text-center px-4 pb-4">
+                <div className="text-center pb-4">
                   <div
                     className="h-px w-10 mx-auto mb-4"
                     style={{ background: "linear-gradient(90deg, #FF6B6B, #D946EF)" }}
@@ -64,8 +69,8 @@ export default function About() {
               </div>
             </div>
 
-            {/* Floating cards */}
-            <div className="absolute -right-6 top-12 rounded-xl px-5 py-4 bg-white shadow-xl border border-gray-100">
+            {/* Floating stat cards — desktop only */}
+            <div className="hidden md:block absolute -right-6 top-12 rounded-xl px-5 py-4 bg-white shadow-xl border border-gray-100">
               <p className="text-xs mb-1" style={{ color: "#64748B" }}>Typical comp plans have</p>
               <p className="text-2xl font-black" style={{ color: "#0F1B4C" }}>
                 8+{" "}
@@ -82,7 +87,7 @@ export default function About() {
               <p className="text-xs mt-1" style={{ color: "#64748B" }}>We aim for 3.</p>
             </div>
 
-            <div className="absolute -left-6 bottom-16 rounded-xl px-5 py-4 bg-white shadow-xl border border-gray-100">
+            <div className="hidden md:block absolute -left-6 bottom-16 rounded-xl px-5 py-4 bg-white shadow-xl border border-gray-100">
               <p className="text-xs mb-1" style={{ color: "#64748B" }}>The Apex promise</p>
               <p className="text-sm font-bold" style={{ color: "#0F1B4C" }}>No junior consultants.</p>
               <p
@@ -96,19 +101,47 @@ export default function About() {
                 No recycled frameworks.
               </p>
             </div>
+
+            {/* Mobile-only stat pills — shown instead of floating cards */}
+            <div className="flex md:hidden gap-3 mt-4">
+              <div className="flex-1 rounded-xl px-4 py-3 bg-gray-50 border border-gray-100">
+                <p className="text-xs mb-0.5" style={{ color: "#64748B" }}>Typical plans</p>
+                <p className="text-base font-black" style={{ color: "#0F1B4C" }}>
+                  8+{" "}
+                  <span
+                    style={{
+                      background: "linear-gradient(135deg, #FF6B6B, #D946EF)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    components
+                  </span>
+                </p>
+                <p className="text-xs" style={{ color: "#64748B" }}>We aim for 3.</p>
+              </div>
+              <div className="flex-1 rounded-xl px-4 py-3 bg-gray-50 border border-gray-100">
+                <p className="text-xs mb-0.5" style={{ color: "#64748B" }}>The promise</p>
+                <p className="text-sm font-bold" style={{ color: "#0F1B4C" }}>No juniors.</p>
+                <p
+                  className="text-sm font-semibold"
+                  style={{
+                    background: "linear-gradient(135deg, #FF6B6B, #D946EF)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  No templates.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Right: Text */}
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <div
-                className="h-px w-8"
-                style={{ background: "linear-gradient(90deg, #FF6B6B, #D946EF)" }}
-              />
-              <span
-                className="text-sm font-medium tracking-widest uppercase"
-                style={{ color: "#64748B" }}
-              >
+              <div className="h-px w-8" style={{ background: "linear-gradient(90deg, #FF6B6B, #D946EF)" }} />
+              <span className="text-sm font-medium tracking-widest uppercase" style={{ color: "#64748B" }}>
                 About
               </span>
             </div>
@@ -133,8 +166,9 @@ export default function About() {
                 drive behavior, and who knows how to fix it.
               </p>
               <p>
-                I work with CROs, VP Sales, and RevOps leaders at Series B-D SaaS companies who need
-                comp that actually works, not comp that just passes a board review.
+                I work with CROs, VP Sales, and RevOps leaders at companies that are scaling — from
+                high-growth startups to large enterprise teams — who need comp that actually works,
+                not comp that just passes a board review.
               </p>
             </div>
 
@@ -195,6 +229,7 @@ export default function About() {
               </a>
             </div>
           </div>
+
         </div>
       </div>
     </section>

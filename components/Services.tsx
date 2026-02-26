@@ -3,7 +3,8 @@ const services = [
     name: "Comp Diagnostic",
     tagline: "Find what's broken. Fast.",
     duration: "2-3 weeks",
-    scope: "Fixed-fee engagement",
+    priceLabel: "Starting at $6K",
+    priceNote: "Fixed fee, scoped upfront",
     description:
       "We audit your existing comp plan, quota structure, and payout history to surface the gaps, misalignments, and silent killers in your current model. You get a clear diagnosis and a prioritized action list.",
     deliverables: [
@@ -19,7 +20,8 @@ const services = [
     name: "Plan Design Sprint",
     tagline: "Rebuild it right.",
     duration: "4-6 weeks",
-    scope: "Project-based engagement",
+    priceLabel: "$15K – $25K",
+    priceNote: "Scoped to org size and complexity",
     description:
       "We redesign your comp plan from the ground up, built around the specific behaviors that drive revenue at your stage. No templates. No recycled frameworks. Custom architecture for your org.",
     deliverables: [
@@ -37,7 +39,8 @@ const services = [
     name: "Annual Comp Architecture",
     tagline: "Strategic partner. Year-round.",
     duration: "6-12 months",
-    scope: "Retainer engagement",
+    priceLabel: "Custom retainer",
+    priceNote: "Scoped by org size and scope",
     description:
       "Embedded comp leadership without the headcount. We own your compensation strategy, annual plan design, mid-year adjustments, and rep-level modeling. Think of us as your comp team.",
     deliverables: [
@@ -70,7 +73,7 @@ export default function Services() {
             Three ways to work with us.
           </h2>
           <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-            Each engagement is scoped to match where you are and what you actually need. Pricing is based on scope and complexity. Every project starts with a free discovery call.
+            Pricing reflects scope and org complexity — not a rate card. Every engagement starts with a free 30-minute discovery call where we figure out what actually makes sense.
           </p>
         </div>
 
@@ -104,7 +107,7 @@ export default function Services() {
               </div>
 
               {/* Name + tagline */}
-              <div className="mb-2">
+              <div className="mb-4">
                 <h3
                   className="text-xl font-bold mb-1"
                   style={{ color: service.featured ? "white" : "#0F1B4C" }}
@@ -116,24 +119,25 @@ export default function Services() {
                 </p>
               </div>
 
-              {/* Scope + duration (replaces hard price) */}
-              <div className="my-4">
-                <p
-                  className="text-base font-bold"
-                  style={{ color: service.featured ? "white" : "#0F1B4C" }}
-                >
-                  {service.scope}
-                </p>
-              </div>
-
+              {/* Soft pricing */}
               <div
-                className={`text-xs font-medium mb-5 pb-5 border-b`}
+                className="rounded-xl px-4 py-3 mb-5"
                 style={{
-                  color: service.featured ? "rgba(255,255,255,0.5)" : "#64748B",
-                  borderColor: service.featured ? "rgba(255,255,255,0.15)" : "#E5E7EB",
+                  background: service.featured ? "rgba(255,255,255,0.08)" : "#F1F5F9",
                 }}
               >
-                {service.duration}
+                <p
+                  className="text-lg font-black leading-tight"
+                  style={{ color: service.featured ? "white" : "#0F1B4C" }}
+                >
+                  {service.priceLabel}
+                </p>
+                <p
+                  className="text-xs mt-0.5"
+                  style={{ color: service.featured ? "rgba(255,255,255,0.45)" : "#64748B" }}
+                >
+                  {service.priceNote} · {service.duration}
+                </p>
               </div>
 
               <p
@@ -166,8 +170,8 @@ export default function Services() {
               <div
                 className="text-xs italic mb-6 p-3 rounded-lg"
                 style={{
-                  background: service.featured ? "rgba(255,255,255,0.08)" : "#F1F5F9",
-                  color: service.featured ? "rgba(255,255,255,0.55)" : "#64748B",
+                  background: service.featured ? "rgba(255,255,255,0.06)" : "#F1F5F9",
+                  color: service.featured ? "rgba(255,255,255,0.45)" : "#64748B",
                 }}
               >
                 <strong>Best for:</strong> {service.ideal}

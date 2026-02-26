@@ -23,10 +23,11 @@ export default function Hero() {
         style={{ background: "linear-gradient(135deg, #D946EF, #FF6B6B)" }}
       />
 
-      <div className="relative max-w-5xl mx-auto px-6 pt-24 pb-20 w-full">
+      {/* Content — pb-40 pushes proof strip well above the fade zone */}
+      <div className="relative max-w-5xl mx-auto px-6 pt-24 pb-40 w-full">
 
         {/* Eyebrow */}
-        <div className="flex items-center gap-3 mb-8 animate-fade-up">
+        <div className="flex items-center gap-3 mb-8">
           <div className="h-px w-8" style={{ background: "linear-gradient(90deg, #FF6B6B, #D946EF)" }} />
           <span className="text-white/50 text-xs font-semibold tracking-[0.22em] uppercase">
             Premium Sales Comp Consulting
@@ -34,7 +35,7 @@ export default function Hero() {
         </div>
 
         {/* Main headline */}
-        <h1 className="animate-fade-up-delay-1 text-5xl md:text-7xl font-black text-white leading-[1.05] tracking-tight mb-8 max-w-4xl">
+        <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.05] tracking-tight mb-8 max-w-4xl">
           Your reps optimize for exactly what{" "}
           <span
             style={{
@@ -48,12 +49,12 @@ export default function Hero() {
         </h1>
 
         {/* Subhead */}
-        <p className="animate-fade-up-delay-2 text-xl text-white/55 font-normal leading-relaxed mb-12 max-w-2xl">
+        <p className="text-xl text-white/55 font-normal leading-relaxed mb-12 max-w-2xl">
           The question is whether that's what you actually want. Apex builds comp plans that engineer the behaviors your business needs to grow.
         </p>
 
         {/* CTAs */}
-        <div className="animate-fade-up-delay-3 flex flex-wrap gap-4 mb-20">
+        <div className="flex flex-wrap gap-4 mb-16">
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-semibold text-sm transition-transform hover:scale-105 active:scale-95"
@@ -72,12 +73,12 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Divider + proof strip */}
-        <div className="animate-fade-up-delay-4 border-t border-white/10 pt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+        {/* Proof strip — now well above the fade */}
+        <div className="border-t border-white/10 pt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { stat: "High-growth", label: "companies at an inflection point." },
             { stat: "Any industry,", label: "if you run a sales org." },
-            { stat: "White-glove", label: "Saxton on every engagement." },
+            { stat: "White-glove", label: "delivery on every engagement." },
             { stat: "No caps,", label: "no MBOs, no band-aids." },
           ].map(({ stat, label }) => (
             <div key={stat}>
@@ -91,14 +92,14 @@ export default function Hero() {
               >
                 {stat}
               </div>
-              <div className="text-white/40 text-xs leading-snug">{label}</div>
+              <div className="text-white/60 text-xs leading-snug">{label}</div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+      {/* Bottom fade — pushed to very bottom so it doesn't overlap content */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none" />
     </section>
   );
 }
