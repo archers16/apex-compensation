@@ -84,7 +84,16 @@ export default function About() {
             <div className="hidden md:block absolute -left-6 bottom-16 rounded-xl px-5 py-4 bg-white shadow-xl border border-gray-100">
               <p className="text-xs mb-1" style={{ color: "#64748B" }}>Every engagement</p>
               <p className="text-sm font-bold" style={{ color: "#0F1B4C" }}>Zero handoffs.</p>
-              <p className="text-sm" style={{ color: "#64748B" }}>Run by me, directly.</p>
+              <p
+                className="text-sm font-medium"
+                style={{
+                  background: "linear-gradient(135deg, #FF6B6B, #D946EF)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Run by me, directly.
+              </p>
             </div>
 
             {/* Mobile-only stat pills */}
@@ -106,7 +115,16 @@ export default function About() {
               <div className="flex-1 rounded-xl px-4 py-3 bg-gray-50 border border-gray-100">
                 <p className="text-xs mb-0.5" style={{ color: "#64748B" }}>Every engagement</p>
                 <p className="text-sm font-bold" style={{ color: "#0F1B4C" }}>Zero handoffs.</p>
-                <p className="text-xs" style={{ color: "#64748B" }}>Run by me, directly.</p>
+                <p
+                  className="text-xs font-medium"
+                  style={{
+                    background: "linear-gradient(135deg, #FF6B6B, #D946EF)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  Run by me, directly.
+                </p>
               </div>
             </div>
           </div>
