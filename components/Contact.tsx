@@ -124,14 +124,15 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold block mb-1.5" style={{ color: "#64748B" }}>Company stage</label>
+                  <label className="text-xs font-semibold block mb-1.5" style={{ color: "#64748B" }}>Company size</label>
                   <select className={inputClass} style={inputStyle}
                     value={form.stage} onChange={(e) => setForm({ ...form, stage: e.target.value })}>
-                    <option value="">Select stage...</option>
-                    <option>Series B</option>
-                    <option>Series C</option>
-                    <option>Series D</option>
-                    <option>Other</option>
+                    <option value="">Select size...</option>
+                    <option>Under 50 employees</option>
+                    <option>50 to 200 employees</option>
+                    <option>200 to 500 employees</option>
+                    <option>500 to 1,000 employees</option>
+                    <option>1,000+ employees</option>
                   </select>
                 </div>
 
