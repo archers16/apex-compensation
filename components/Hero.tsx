@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="flex items-center gap-3 mb-8 animate-fade-up">
           <div className="h-px w-8" style={{ background: "linear-gradient(90deg, #FF6B6B, #D946EF)" }} />
           <span className="text-white/50 text-xs font-semibold tracking-[0.22em] uppercase">
-            Premium Sales Comp Consulting — Series B-D B2B SaaS
+            Premium Sales Comp Consulting
           </span>
         </div>
 
@@ -75,8 +75,8 @@ export default function Hero() {
         {/* Divider + proof strip */}
         <div className="animate-fade-up-delay-4 border-t border-white/10 pt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { stat: "Series B-D", label: "Only. We know this stage cold." },
-            { stat: "B2B SaaS", label: "Native. No generic frameworks." },
+            { stat: "High-growth", label: "companies at an inflection point." },
+            { stat: "Any industry,", label: "if you run a sales org." },
             { stat: "White-glove", label: "Saxton on every engagement." },
             { stat: "No caps,", label: "no MBOs, no band-aids." },
           ].map(({ stat, label }) => (

@@ -68,7 +68,7 @@ export default function Contact() {
             <div className="flex flex-col gap-5">
               {[
                 { label: "Email", value: "saxtonparcher@gmail.com", href: "mailto:saxtonparcher@gmail.com" },
-                { label: "Best for", value: "Series B-D B2B SaaS companies", href: null },
+                { label: "Best for", value: "High-growth companies scaling their sales org", href: null },
                 { label: "Response time", value: "Within 1 business day", href: null },
               ].map(({ label, value, href }) => (
                 <div key={label}>
