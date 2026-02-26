@@ -6,12 +6,8 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
-          {/* Left: Photo card
-              On mobile: no overflow, no absolute-positioned cards, clean centered layout
-              On desktop: full layout with floating stat cards */}
+          {/* Left: Photo card */}
           <div className="relative">
-
-            {/* The dark photo card — no overflow-visible on mobile */}
             <div
               className="relative rounded-2xl flex items-center justify-center overflow-visible"
               style={{
@@ -71,9 +67,9 @@ export default function About() {
 
             {/* Floating stat cards — desktop only */}
             <div className="hidden md:block absolute -right-6 top-12 rounded-xl px-5 py-4 bg-white shadow-xl border border-gray-100">
-              <p className="text-xs mb-1" style={{ color: "#64748B" }}>Typical comp plans have</p>
+              <p className="text-xs mb-1" style={{ color: "#64748B" }}>Sellers covered across</p>
               <p className="text-2xl font-black" style={{ color: "#0F1B4C" }}>
-                8+{" "}
+                2,000+{" "}
                 <span
                   style={{
                     background: "linear-gradient(135deg, #FF6B6B, #D946EF)",
@@ -81,15 +77,15 @@ export default function About() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  components.
+                  plans.
                 </span>
               </p>
-              <p className="text-xs mt-1" style={{ color: "#64748B" }}>We aim for 3.</p>
+              <p className="text-xs mt-1" style={{ color: "#64748B" }}>6 B2B SaaS orgs.</p>
             </div>
 
             <div className="hidden md:block absolute -left-6 bottom-16 rounded-xl px-5 py-4 bg-white shadow-xl border border-gray-100">
-              <p className="text-xs mb-1" style={{ color: "#64748B" }}>The Apex promise</p>
-              <p className="text-sm font-bold" style={{ color: "#0F1B4C" }}>No junior consultants.</p>
+              <p className="text-xs mb-1" style={{ color: "#64748B" }}>Previously at</p>
+              <p className="text-sm font-bold" style={{ color: "#0F1B4C" }}>Stripe. Twilio.</p>
               <p
                 className="text-sm font-semibold"
                 style={{
@@ -98,16 +94,16 @@ export default function About() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                No recycled frameworks.
+                SOCi. Collibra.
               </p>
             </div>
 
-            {/* Mobile-only stat pills — shown instead of floating cards */}
+            {/* Mobile-only stat pills */}
             <div className="flex md:hidden gap-3 mt-4">
               <div className="flex-1 rounded-xl px-4 py-3 bg-gray-50 border border-gray-100">
-                <p className="text-xs mb-0.5" style={{ color: "#64748B" }}>Typical plans</p>
+                <p className="text-xs mb-0.5" style={{ color: "#64748B" }}>Sellers covered</p>
                 <p className="text-base font-black" style={{ color: "#0F1B4C" }}>
-                  8+{" "}
+                  2,000+{" "}
                   <span
                     style={{
                       background: "linear-gradient(135deg, #FF6B6B, #D946EF)",
@@ -115,14 +111,14 @@ export default function About() {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    components
+                    plans
                   </span>
                 </p>
-                <p className="text-xs" style={{ color: "#64748B" }}>We aim for 3.</p>
+                <p className="text-xs" style={{ color: "#64748B" }}>6 B2B SaaS orgs.</p>
               </div>
               <div className="flex-1 rounded-xl px-4 py-3 bg-gray-50 border border-gray-100">
-                <p className="text-xs mb-0.5" style={{ color: "#64748B" }}>The promise</p>
-                <p className="text-sm font-bold" style={{ color: "#0F1B4C" }}>No juniors.</p>
+                <p className="text-xs mb-0.5" style={{ color: "#64748B" }}>Previously at</p>
+                <p className="text-sm font-bold" style={{ color: "#0F1B4C" }}>Stripe. Twilio.</p>
                 <p
                   className="text-sm font-semibold"
                   style={{
@@ -131,7 +127,7 @@ export default function About() {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  No templates.
+                  SOCi. Collibra.
                 </p>
               </div>
             </div>
@@ -150,34 +146,35 @@ export default function About() {
               className="text-4xl md:text-5xl font-black leading-tight mb-6"
               style={{ color: "#0F1B4C" }}
             >
-              I'm Saxton. I built Apex because I kept seeing the same problems.
+              I spent 9 years building comp programs at companies like Stripe, Twilio, and SOCi. Now I do it for yours.
             </h2>
 
             <div className="flex flex-col gap-5 text-base leading-relaxed" style={{ color: "#64748B" }}>
               <p>
-                Sales comp consulting has a reputation problem. Big firms send junior analysts armed
-                with recycled templates. Older independents deliver reports that look impressive and
-                collect dust. Nobody actually owns the outcome.
+                Before launching Apex, I spent nearly a decade inside some of the fastest-growing
+                B2B SaaS companies in the world. I've designed comp plans for 2,000+ sellers across
+                SMB, mid-market, enterprise, and channel teams. I've built entire comp functions from
+                scratch, stood up ICM platforms, modeled $7-8M in annual commission expense, and
+                presented plan effectiveness to boards.
               </p>
               <p>
-                Apex is different by design. Every engagement is run by me, directly. No layers. No
-                handoffs. No "the senior partner will review this." When you hire Apex, you get
-                someone who has seen what happens when comp plans are built to manage cost instead of
-                drive behavior, and who knows how to fix it.
+                I know what it looks like when comp plans are working and what it looks like when
+                they're quietly killing performance. Usually the difference isn't the numbers. It's
+                whether the plan was designed around the behaviors you actually want, or just built
+                to pass finance review.
               </p>
               <p>
-                I work with CROs, VP Sales, and RevOps leaders at companies that are scaling — from
-                high-growth startups to large enterprise teams — who need comp that actually works,
-                not comp that just passes a board review.
+                Apex exists because most companies don't have someone with this background
+                available to them full-time. Now they do, without the headcount.
               </p>
             </div>
 
             <div className="mt-8 flex flex-col gap-3">
               {[
-                "Custom plans. No templates, no copy-paste.",
-                "White-glove attention on every engagement.",
-                "Plain language. No jargon for jargon's sake.",
-                "Opinions backed by reasoning, not convention.",
+                "Stripe, Twilio, SOCi, Collibra, Upland — operator experience, not theory.",
+                "Built from-scratch comp functions, not just plan tweaks.",
+                "CaptivateIQ and Xactly certified. ICM implementation experience.",
+                "Every engagement run by me directly. No juniors, no handoffs.",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <div

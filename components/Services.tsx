@@ -20,8 +20,8 @@ const services = [
     name: "Plan Design Sprint",
     tagline: "Rebuild it right.",
     duration: "4-6 weeks",
-    priceLabel: "$15K – $25K",
-    priceNote: "Scoped to org size and complexity",
+    priceLabel: "Starting at $15K",
+    priceNote: "Scoped by org size, segments, and number of roles",
     description:
       "We redesign your comp plan from the ground up, built around the specific behaviors that drive revenue at your stage. No templates. No recycled frameworks. Custom architecture for your org.",
     deliverables: [
@@ -40,7 +40,7 @@ const services = [
     tagline: "Strategic partner. Year-round.",
     duration: "6-12 months",
     priceLabel: "Custom retainer",
-    priceNote: "Scoped by org size and scope",
+    priceNote: "Scoped by org size and engagement depth",
     description:
       "Embedded comp leadership without the headcount. We own your compensation strategy, annual plan design, mid-year adjustments, and rep-level modeling. Think of us as your comp team.",
     deliverables: [
@@ -73,7 +73,7 @@ export default function Services() {
             Three ways to work with us.
           </h2>
           <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-            Pricing reflects scope and org complexity — not a rate card. Every engagement starts with a free 30-minute discovery call where we figure out what actually makes sense.
+            Pricing reflects the scope of your org — the number of roles, segments, and plans involved. Every engagement starts with a free 30-minute call where we figure out what actually makes sense.
           </p>
         </div>
 
@@ -119,7 +119,7 @@ export default function Services() {
                 </p>
               </div>
 
-              {/* Soft pricing */}
+              {/* Pricing pill */}
               <div
                 className="rounded-xl px-4 py-3 mb-5"
                 style={{
