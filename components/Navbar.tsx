@@ -27,17 +27,17 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
 
         {/* Logo — transparent PNG, white on dark / full color on white */}
         <a href="#" className="flex items-center">
-          <div className="relative" style={{ width: 52, height: 52 }}>
+          <div className="relative" style={{ width: 72, height: 72 }}>
             {/* Full color version — visible on white navbar */}
             <Image
               src="/logo-transparent.png"
               alt="Apex Compensation"
-              width={52}
-              height={52}
+              width={72}
+              height={72}
               className={`absolute inset-0 transition-opacity duration-300 object-contain ${
                 scrolled ? "opacity-100" : "opacity-0"
               }`}
@@ -47,8 +47,8 @@ export default function Navbar() {
             <Image
               src="/logo-white.png"
               alt="Apex Compensation"
-              width={52}
-              height={52}
+              width={72}
+              height={72}
               className={`absolute inset-0 transition-opacity duration-300 object-contain ${
                 scrolled ? "opacity-0" : "opacity-100"
               }`}
